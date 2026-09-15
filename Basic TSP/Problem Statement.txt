@@ -1,0 +1,8 @@
+Description:
+A salesman needs to visit n cities. Each city must be visited exactly once, and the salesman must return to the starting city at the end of the tour. The cost (or distance) to travel between any pair of cities i and j is given as a non-negative value c(i, j).Your task is to write a program that finds a valid tour with the minimum total travel cost.
+
+Input Format:
+The first line contains an integer n , representing the number of cities (indexed from 1 to n).The following n lines each contain n space-separated integers, representing the cost matrix C of size n*n, where C[i][j] is the travel cost from city i to city j.Note: C[i][i] = 0 for all 1 <= i <= n.
+
+Output Format:
+Print a single integer representing the minimum total cost to complete the TSP tour.
