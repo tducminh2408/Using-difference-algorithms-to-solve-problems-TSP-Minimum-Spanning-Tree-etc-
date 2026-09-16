@@ -9,12 +9,12 @@ const int INF = 1e9; // Giá trị đại diện cho vô cực
 int n;
 vector<vector<int>> C;
 vector<vector<int>> memo;
-
-// Hàm DP tính chi phí nhỏ nhất
+//mảng memo[mask][u] để lưu lại giá trị nhỏ nhất của đường đi còn lại để hoàn thành chu trình khi đang ở thành phố u và có tập các thành phố đã đi qua là mask
+// Hàm tsp tính chi phí nhỏ nhất
 // mask: trạng thái các thành phố đã đi qua (dưới dạng chuỗi bit)
 // u: thành phố hiện tại đang đứng
 int tsp(int mask, int u) {
-    // Nếu tất cả n thành phố đều đã đi qua (tất cả các bit từ 0 đến n-1 đều là 1)
+    // Nếu tất cả n thành phố đều đã đi qua 
     if (mask == (1 << n) - 1) {
         return C[u][0]; // Quay về thành phố xuất phát (0)
     }
@@ -52,11 +52,9 @@ int main() {
             cin >> C[i][j];
         }
     }
-
-    // Khoảng không gian trạng thái: (2^n) hàng x n cột
     memo.assign(1 << n, vector<int>(n, -1));
 
-    // Xuất phát từ thành phố 0, mask ban đầu là (1 << 0) tức là bit 0 được bật
+    // Xuất phát từ thành phố 0
     int minCost = tsp(1, 0);
 
     cout << minCost << "\n";
