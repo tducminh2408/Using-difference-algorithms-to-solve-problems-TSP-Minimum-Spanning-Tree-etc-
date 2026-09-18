@@ -5,7 +5,7 @@ The cost (or distance) to travel between any pair of cities i and j is given as 
 Your task is to write a program that finds a valid tour with the minimum total travel cost.
 
 Input Format:
-The first line contains an integer n , representing the number of cities (indexed from 1 to n).
+The first line contains an integer n , representing the number of cities (indexed from 0 to n-1).
 The following n lines each contain n space-separated integers, representing the cost matrix C of size n*n.
 where C[i][j] is the travel cost from city i to city j.Note: C[i][i] = 0 for all 1 <= i <= n.
 
